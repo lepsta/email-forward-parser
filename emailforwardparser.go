@@ -104,7 +104,7 @@ func _ParseOriginalEmail(text string, body string) _ParseOriginalEmailResult {
 	text = _FourSpaces.ReplaceAllString(text, "")
 
 	return _ParseOriginalEmailResult{
-		Body: _ParseOriginalBody(text),
+		Body: text, // _ParseOriginalBody(text),
 
 		From: _ParseOriginalFrom(text, body),
 		To:   _ParseOriginalTo(text),
